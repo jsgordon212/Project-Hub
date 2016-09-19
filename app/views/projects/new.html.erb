@@ -1,0 +1,28 @@
+<div id="project-form" class="container">
+<div class="center-block">
+    <div class="form-area">
+        <br style="clear:both">
+        <h3 style="margin-bottom: 25px; text-align: center;">Create A New Project</h3>
+
+        <%= form_for @project do |f|  %>
+
+          <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :description %><br>
+            <%= f.text_area :description, class: 'form-control', cols: 43, rows: 5 %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :last_update %><br>
+            <%= f.text_field :last_update, class: 'form-control' %>
+          </div>
+          <%= f.submit "Create Project", class: "btn btn-lg btn-success btn-block" %>
+        <% end %>
+
+    </div>
+</div>
+</div>
