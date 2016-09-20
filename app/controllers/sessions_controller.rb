@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
         log_in user
         redirect_to current_user
     else
-      flash.now[:danger] = 'Invalid email/password. Try uno mas'
-    render 'new'
+      @errors = "Display Name or Password invalid"
+      render 'new'
     end
   end
 

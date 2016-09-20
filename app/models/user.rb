@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include Obfuscate
 
   has_many :projects
 
@@ -21,8 +22,9 @@ class User < ApplicationRecord
     end
   end
 
-
-
+  def to_param
+    encrypt id
+  end
 
 
   private

@@ -31,7 +31,7 @@
                     <% @projects.each do |project| %>
                       <tr>
                         <td align="center">
-                          <a class="btn btn-default" href="/projects/<%=project.id%>/edit"><em class="fa fa-pencil"></em></a>
+                       <a class="btn btn-default" href="/projects/<%=project.id%>/edit"><em class="fa fa-pencil"></em></a>
                           <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><%= link_to project.title, project%></a></td>

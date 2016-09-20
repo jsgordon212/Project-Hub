@@ -12,6 +12,9 @@
               <div class="form-group">
 
               <%= form_for(@user, url: signup_path) do |f|  %>
+                <%if @errors %>
+                  <span id="errors"><%= @errors %></span>
+                <% end %>
 
                 <div class="form-group">
                   <%= f.label :username %>

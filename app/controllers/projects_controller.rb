@@ -6,8 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by_id(params[:id])
-    @user = @project.user
+    @project = Project.find Project.decrypt(params[:id])
   end
 
   def new
@@ -29,12 +28,12 @@ class ProjectsController < ApplicationController
 
   def edit
     current_user
-    @project = Project.find_by_id(params[:id])
+    @project = Project.find(params[:id])
   end
 
   def update
     current_user
-    @project = Project.find_by_id(params[:id])
+    @project = Project.find Project.decrypt(params[:id])
     if @recipe.update(recipe_params)
       redirect_to @project
     else
@@ -44,7 +43,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     current_user
-    @project = Project.find_by_id(params[:id])
+    @project = Project.find Project.decrypt(params[:id])
     if @current_user == @project.user
       @project.destroy
       redirect_to user_path(@current_user)
