@@ -8,6 +8,9 @@
 			  	<div class="panel-body">
                     <fieldset>
               <%= form_for(:session, url: login_path) do |f| %>
+                <%if @errors %>
+                  <span id="errors"><%= @errors %></span>
+                <% end %>
                 <div class="form-group">
                   <%= f.label :email %>
                   <%= f.email_field :email, class: 'form-control' %>
