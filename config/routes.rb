@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  get '/timeline', to: 'projects#timeline'
+
   resources :users, :except => [:new, :create]
   resources :projects
 
