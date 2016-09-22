@@ -2,6 +2,7 @@ class User < ApplicationRecord
   include Obfuscate
 
   has_many :projects
+  has_many :components
 
   validates :username, presence: true, length: {maximum: 20}
   validates :password, presence: true, length: {minimum: 6}
