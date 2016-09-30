@@ -28,13 +28,13 @@ class ProjectsController < ApplicationController
 
   def edit
     current_user
-    @project = Project.find(params[:id])
+    @project = Project.find Project.decrypt(params[:id])
   end
 
   def update
     current_user
     @project = Project.find Project.decrypt(params[:id])
-    if @recipe.update(recipe_params)
+    if @project.update(project_params)
       redirect_to @project
     else
       render 'edit'
