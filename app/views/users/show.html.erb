@@ -31,8 +31,8 @@
                     <% @projects.each do |project| %>
                       <tr>
                         <td align="center">
-                       <a class="btn btn-default" href="/projects/<%=project.id%>/edit"><em class="fa fa-pencil"></em></a>
-                          <%= link_to project, method: :delete, :class => "btn btn-danger" do %>
+                       <a class="btn btn-default" href="/projects/<%= project.encrypt(project.id) %>/edit"><em class="fa fa-pencil"></em></a>
+                          <%= link_to project, method: :delete, data: {confirm: "Are you sure you want to delete this project?"}, :class => "btn btn-danger" do %>
                             <em class="fa fa-trash"></em>
                           <% end %>
                         </td>

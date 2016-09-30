@@ -30,7 +30,6 @@ gem 'font-awesome-rails'
 gem 'pry'
 gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.2.0'
-gem 'materialize-sass'
 gem 'autoprefixer-rails'
 
 # Use Capistrano for deployment
