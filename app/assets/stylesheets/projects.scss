@@ -159,3 +159,29 @@
     display: block;
   }
 }
+
+
+.main-components {
+  width:400px;
+  height:500px;
+  display:block;
+  float:left;
+  vertical-align: top;
+  border-style: double;
+  margin-left: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.feature-components {
+  text-align: center;
+  text-decoration: underline;
+  width:200px;
+  height:500px;
+  display:block;
+  vertical-align: top;
+  float:right;
+  border-style: double;
+  margin-right: 200px;
+
+}
