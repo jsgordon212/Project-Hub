@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
     redirect_to root_url
   end
 
+  def timeline
+    
+  end
+
   def show
     @project = Project.find Project.decrypt(params[:id])
   end
